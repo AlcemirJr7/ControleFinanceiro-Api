@@ -3,23 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleFinanceiro.Api", "ControleFinanceiro.Api\ControleFinanceiro.Api.csproj", "{8B22AD3B-81C3-4655-AEB9-A5F0E4BF8156}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleFinanceiro.Api", "ControleFinanceiro.Api\ControleFinanceiro.Api.csproj", "{8B22AD3B-81C3-4655-AEB9-A5F0E4BF8156}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleFinanceiro.Application", "ControleFinanceiro.Application\ControleFinanceiro.Application.csproj", "{A019737A-AD7D-412D-826D-CC5506FFBA8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleFinanceiro.Application", "ControleFinanceiro.Application\ControleFinanceiro.Application.csproj", "{A019737A-AD7D-412D-826D-CC5506FFBA8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleFinanceiro.Domain", "ControleFinanceiro.Domain\ControleFinanceiro.Domain.csproj", "{4EEA84EE-E733-4F10-BFCC-961F8F9A5EDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleFinanceiro.Domain", "ControleFinanceiro.Domain\ControleFinanceiro.Domain.csproj", "{4EEA84EE-E733-4F10-BFCC-961F8F9A5EDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleFinanceiro.Data", "ControleFinanceiro.Data\ControleFinanceiro.Data.csproj", "{B2C478AF-C51B-4F28-BB60-834EF33ADBBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleFinanceiro.Data", "ControleFinanceiro.Data\ControleFinanceiro.Data.csproj", "{B2C478AF-C51B-4F28-BB60-834EF33ADBBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleFinanceiro.IoC", "ControleFinanceiro.IoC\ControleFinanceiro.IoC.csproj", "{DCD6D1DA-6A34-4E8A-B877-092B08F6804D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControleFinanceiro.IoC", "ControleFinanceiro.IoC\ControleFinanceiro.IoC.csproj", "{DCD6D1DA-6A34-4E8A-B877-092B08F6804D}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{5350156A-D2AD-4485-950D-AC3AF72C5831}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8B22AD3B-81C3-4655-AEB9-A5F0E4BF8156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -42,5 +41,12 @@ Global
 		{DCD6D1DA-6A34-4E8A-B877-092B08F6804D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCD6D1DA-6A34-4E8A-B877-092B08F6804D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCD6D1DA-6A34-4E8A-B877-092B08F6804D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5350156A-D2AD-4485-950D-AC3AF72C5831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5350156A-D2AD-4485-950D-AC3AF72C5831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5350156A-D2AD-4485-950D-AC3AF72C5831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5350156A-D2AD-4485-950D-AC3AF72C5831}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
