@@ -1,8 +1,29 @@
 version: '3.4'
-
+ 
 services:
   controlefinanceiro.api:
     image: ${DOCKER_REGISTRY-}controlefinanceiroapi
     build:
       context: .
       dockerfile: ControleFinanceiro.Api/Dockerfile
+    ports:
+      - "8000:80"
+    depends_on:
+      - controlefinanceirodb
+
+  controlefinanceirodb:
+    container_name: controlefinanceirodb
+    image: postgres:16.2-alpine3.19
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: q1w2e3
+      POSTGRES_DB: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
