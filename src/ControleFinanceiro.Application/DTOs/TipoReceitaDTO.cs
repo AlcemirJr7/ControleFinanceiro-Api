@@ -1,4 +1,4 @@
-﻿using ControleFinanceiro.Domain.Enums;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ControleFinanceiro.Application.DTOs
 {
@@ -6,8 +6,9 @@ namespace ControleFinanceiro.Application.DTOs
     {
         public Guid Id { get; set; }
         public string Descricao { get; set; } = string.Empty;
-        public ETipoReceitaSituacao Situacao { get; set; }
-        public DateTime DataCadastro { get; set; }
-        public DateTime? DataAlteracao { get; set; }
+
+        [DataType(DataType.DateTime)]
+        public string? DataCadastro { get; set; }
+
     }
 }

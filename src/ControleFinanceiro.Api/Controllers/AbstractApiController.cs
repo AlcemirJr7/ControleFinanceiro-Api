@@ -1,11 +1,11 @@
 ﻿using ControleFinanceiro.Application.DTOs.Response;
 using ControleFinanceiro.Application.Exceptions;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Mime;
 
 namespace ControleFinanceiro.Api.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    [Produces(MediaTypeNames.Application.Json)]    
     public abstract class AbstractApiController : ControllerBase
     {
         protected IActionResult HandleControllerErrors(Exception ex)

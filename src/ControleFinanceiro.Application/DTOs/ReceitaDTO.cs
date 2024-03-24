@@ -1,4 +1,4 @@
-﻿using ControleFinanceiro.Domain.Entities;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ControleFinanceiro.Application.DTOs
 {
@@ -6,11 +6,15 @@ namespace ControleFinanceiro.Application.DTOs
     {
         public Guid Id { get; set; }
         public Guid TipoReceitaId { get; set; }
-        public string Nome { get; set; } = string.Empty;
         public string Descricao { get; set; } = string.Empty;
         public decimal Valor { get; set; } = 0;
-        public DateTime DataReceita { get; set; }
-        public DateTime DataCadastro { get; set; }
-        public DateTime? DataAlteracao { get; set; }
+        
+        [DataType(DataType.DateTime)]
+        public string? DataReceita { get; set; }
+        [DataType(DataType.DateTime)]
+        public string? DataCadastro { get; set; }
+        [DataType(DataType.DateTime)]
+        public string? DataAlteracao { get; set; }
+
     }
 }

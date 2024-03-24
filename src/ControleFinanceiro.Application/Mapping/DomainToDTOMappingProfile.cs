@@ -8,7 +8,8 @@ namespace ControleFinanceiro.Application.Mapping
     {
         public DomainToDTOMappingProfile()
         {
-            CreateMap<Receita, ReceitaDTO>().ReverseMap();            
+            CreateMap<Receita, ReceitaDTO>().ReverseMap();
+            CreateMap<TipoReceita, TipoReceitaDTO>().ReverseMap();
         }
     }
 }

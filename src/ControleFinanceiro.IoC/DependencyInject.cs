@@ -20,12 +20,14 @@ namespace ControleFinanceiro.IoC
         private static IServiceCollection InjectRepositories(this IServiceCollection services)
         {
             services.AddScoped<IReceitaRepository, ReceitaRepository>();
+            services.AddScoped<ITipoReceitaRepository, TipoReceitaRepository>();
             return services;
         }
 
         private static IServiceCollection InjectServices(this IServiceCollection services)
         {
             services.AddScoped<IReceitaService, ReceitaService>();
+            services.AddScoped<ITipoReceitaService, TipoReceitaService>();
             return services;
         }
     }

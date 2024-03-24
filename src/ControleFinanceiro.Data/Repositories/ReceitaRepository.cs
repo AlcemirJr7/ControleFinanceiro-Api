@@ -1,6 +1,7 @@
 ﻿using ControleFinanceiro.Data.Context;
 using ControleFinanceiro.Data.Repositories.Interfaces;
 using ControleFinanceiro.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace ControleFinanceiro.Data.Repositories
 {
@@ -32,6 +33,16 @@ namespace ControleFinanceiro.Data.Repositories
             _appDbContext.Update(receita);
             await _appDbContext.SaveChangesAsync();
             return receita;
+        }
+
+        public async Task<Receita?> GetByIdAsync(Guid id)
+        {
+            return await _appDbContext.Receitas.FirstOrDefaultAsync(x => x.Id == id);
+        }
+
+        public async Task<IEnumerable<Receita>?> GetAllAsync()
+        {
+            return await _appDbContext.Receitas.ToListAsync();
         }
     }
 }

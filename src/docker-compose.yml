@@ -7,7 +7,9 @@ services:
       context: .
       dockerfile: ControleFinanceiro.Api/Dockerfile
     ports:
-      - "8000:80"
+      - "8080:80"
+    expose:
+      - "8080"
     depends_on:
       - controlefinanceirodb
 

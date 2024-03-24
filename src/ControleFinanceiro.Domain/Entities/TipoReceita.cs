@@ -1,38 +1,31 @@
-﻿using ControleFinanceiro.Domain.Enums;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ControleFinanceiro.Domain.Entities
 {
+    [Table("tb_tipo_receita")]
     public class TipoReceita
     {
+        [Column("id")]
         public Guid Id { get; private set; }
+        
+        [Column("descricao")]
         public string Descricao { get; private set; } = string.Empty;
-        public ETipoReceitaSituacao Situacao {  get; private set; }
-        public DateTime DataCadastro { get; private set; }
-        public DateTime? DataAlteracao { get; private set; }
 
-        public TipoReceita() { }
+        [Column("data_cadastro")]
+        public DateTime? DataCadastro { get; private set; }
+
+        public TipoReceita() {}
+
+        public void SetDataCadastro(DateTime dataCadastro)
+        {
+            DataCadastro = dataCadastro;
+        }
 
         public TipoReceita(string descricao)
         {
             Id = Guid.NewGuid();
             Descricao = descricao;
-            Situacao = ETipoReceitaSituacao.Ativo;
             DataCadastro = DateTime.Now;
-        }
-
-        public TipoReceita(string descricao, ETipoReceitaSituacao situacao)
-        {
-            Id = Guid.NewGuid();
-            Descricao = descricao;
-            Situacao = situacao;
-            DataCadastro = DateTime.Now;
-        }
-
-        public void Update(string descricao, ETipoReceitaSituacao situacao)
-        {
-            Descricao = descricao;
-            Situacao = situacao;
-            DataAlteracao = DateTime.Now;
         }
         
     }
