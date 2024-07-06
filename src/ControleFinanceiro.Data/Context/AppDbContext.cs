@@ -13,5 +13,8 @@ namespace ControleFinanceiro.Data.Context
 
         public DbSet<Receita> Receitas { get; set; }
         public DbSet<TipoReceita> TipoReceitas { get; set; }
+        public DbSet<Despesa> Despesas { get; set; }
+        public DbSet<TipoDespesa> TipoDespesas { get; set; }
+
     }
 }

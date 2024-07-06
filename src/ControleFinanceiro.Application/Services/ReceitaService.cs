@@ -28,6 +28,7 @@ namespace ControleFinanceiro.Application.Services
         public async Task<ReceitaDTO> DeleteByIdAsync(Guid id)
         {
             var receita = await _receitaRepository.GetByIdAsync(id);
+
             if (receita is null) 
             {
                 throw new Exception($"Id {id} not found.");

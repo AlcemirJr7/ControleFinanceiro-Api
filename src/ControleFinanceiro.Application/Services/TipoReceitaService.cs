@@ -30,9 +30,8 @@ namespace ControleFinanceiro.Application.Services
         {
             var tipoReceita = await _tipoReceitaRepository.GetByIdAsync(id);
             if (tipoReceita is null) 
-            {
                 throw new Exception($"Id {id} not found.");
-            }
+            
             var result = await _tipoReceitaRepository.DeleteAsync(tipoReceita);
             return _mapper.Map<TipoReceitaDTO>(result);
         }

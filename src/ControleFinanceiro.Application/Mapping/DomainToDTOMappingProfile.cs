@@ -10,6 +10,9 @@ namespace ControleFinanceiro.Application.Mapping
         {
             CreateMap<Receita, ReceitaDTO>().ReverseMap();
             CreateMap<TipoReceita, TipoReceitaDTO>().ReverseMap();
+            CreateMap<Despesa, DespesaDTO>().ReverseMap();
+            CreateMap<TipoDespesa, TipoDespesaDTO>().ReverseMap();
+            
         }
     }
 }

@@ -21,6 +21,8 @@ namespace ControleFinanceiro.IoC
         {
             services.AddScoped<IReceitaRepository, ReceitaRepository>();
             services.AddScoped<ITipoReceitaRepository, TipoReceitaRepository>();
+            services.AddScoped<IDespesaRepository, DespesaRepository>();
+            services.AddScoped<ITipoDespesaRepository, TipoDespesaRepository>();
             return services;
         }
 
@@ -28,6 +30,8 @@ namespace ControleFinanceiro.IoC
         {
             services.AddScoped<IReceitaService, ReceitaService>();
             services.AddScoped<ITipoReceitaService, TipoReceitaService>();
+            services.AddScoped<IDespesaService, DespesaService>();
+            services.AddScoped<ITipoDespesaService, TipoDespesaService>();
             return services;
         }
     }
